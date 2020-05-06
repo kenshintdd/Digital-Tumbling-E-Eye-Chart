@@ -3,7 +3,12 @@ const brush1 = scale.getContext('2d');
 brush1.fillStyle = 'lightgray';
 brush1.beginPath();
 
-const inicialWidth = 500; // valor inicial da largura do optotipo, essa variável não é alterada, apenas é adicionada ou subtraida pela variável counter
+const inicialWidth = getApproximateWidth(); // valor inicial da largura do optotipo, valor inicial calculado por aproximação, apenas é adicionada ou subtraida pela variável counter
+
+function getApproximateWidth() {
+    // valor inicial baseado no cálculo usando o tamanho padrão de um cartão de crédito e a taxa de pixelização do monitor
+    return 8560 * window.devicePixelRatio / 26.3; 
+}
 
 function calibrationAlert() {
     alert("Before using the eye chart, please check the scale calibration for your monitor screen. Otherwise, the optotypes will be displayed in a wrong size.")
@@ -21,7 +26,7 @@ function increaseScale() {
     if (inicialWidth + counter < 870) { // escala máxima é de 870 px
         counter = counter + 5; // vai adicionando 5 px de cada vez
         drawCard(brush1, 0, 50, inicialWidth + counter); // desenha o cartão com dimensção atualizada
-        document.querySelector('#scalenumber').innerHTML = inicialWidth + counter + " pixels"; // atualiza o display do valor da escala na tela
+        document.querySelector('#scalenumber').innerHTML = width + " pixels"; // atualiza o display do valor da escala na tela
     }
 }
 
