@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    height: 40px;
+    padding: 0 8px;
+}
+.logo {
+    line-height: 40px;
+    float: left;
+    color: gray;
+}
+.menu {
+    float: right;
+    line-height: 40px;
+}
+.menu a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    padding: 0 30px;
+}
+main {
+    padding: 30px 10px 10px 10px;
+}
+#scale {
+    position: relative;
+	display: block;
+	margin: auto;
+}
+.canvasContainer {
+    position: fixed;
+    display: block;
+    width: 100%;
+    top: 0px;
+    z-index: -1;
+}
+#echart {
+    position: relative;
+	display: block;
+	margin: auto;
+}
+.creditCardText {
+    display:inline-block;
+    position: relative;
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+    left: 280px;
+    top: 230px;
+    z-index: 1;
+}
+#decimalFraction {
+    position: relative;
+    margin-top: 15%;
+    float: left;
+    font-weight: bold;
+    font-size: 30px;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;    /* Likely future */
+}
+#snellenFraction {
+    position: relative;
+    margin-top: 15%;
+    float: right;
+    font-weight: bold;
+    font-size: 30px;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;    /* Likely future */
+}
+#scalenumber {
+    color: lightgray;
+    font-size: 15px;
+}
+#letterSize {
+    color: lightgray;
+    font-size: 15px;
+}
+.navBar {
+    float: right;
+}
